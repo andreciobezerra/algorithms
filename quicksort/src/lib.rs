@@ -53,4 +53,11 @@ mod tests {
         let result = quicksort(&list);
         assert_eq!(result, []);
     }
+
+    #[test]
+    fn test_6() {
+        let list: Vec<usize> = (1..1000).rev().collect();
+        let result = quicksort(&list);
+        assert_eq!(result, (1..10000).collect::<Vec<usize>>());
+    }
 }
